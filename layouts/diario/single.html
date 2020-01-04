@@ -1,5 +1,15 @@
+{{ partial "diario/header" . }}
+
 <h1>{{ .Title }}</h1>
 <small>{{ .Description }}</small>
 <div class="content">
     {{ .Content }}
 </div>
+
+<hr />
+
+<blockquote class="text-muted">
+    Dentro de poco habré completado la migración de los comentarios al archivo del diario.
+</blockquote>
+
+{{ partial "diario/footer" . }}

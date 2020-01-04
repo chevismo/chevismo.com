@@ -1,6 +1,7 @@
 html, body {
-    background: #f8f8f8 url('./assets/bg.gif') top repeat-x;
-    padding: 0 1em;
+    background: #f8f8f8 url('/assets/bg.gif') top repeat-x;
+    padding: 0;
+    margin: 0;
 }
 
 h1 {
@@ -9,8 +10,46 @@ h1 {
 }
 
 article {
-    padding: 0 1em;
+    padding: 0 1em 3em;
     width: 800px;
     margin: 0 auto;
     font-size: 1.3em;
+}
+
+.tiled {
+    background: #737172 url(/assets/tileBg.jpg);
+}
+
+.diario-header {
+  background: #171717;
+  color: #FFF;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  border-bottom: #8f3434 solid 4px;
+}
+
+.diario-content {
+    padding: 2em 1em;
+    background: #f8f8f8;
+    border-right: #8f3434 solid 4px;
+    border-left: #8f3434 solid 4px;
+    font-family: Georgia,"Times New Roman",Times,serif;
+}
+
+.diario-content h2 {
+    color: #5E0002;
+    text-shadow: #FFF 1px 1px;
+    font-size: 1.5rem;
+}
+
+.diario-content .content {
+    font-size: 1.25rem;
+}
+
+.diario-footer {
+    background: #f8f8f8;
+    font-size: 0.9em;
+    padding: 0.5em 1em;
+    border-top: solid #ccc 1px;
 }

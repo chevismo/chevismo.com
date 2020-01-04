@@ -2,8 +2,8 @@
 <html>
 <head>
     <title>Chevismo.com</title>
-    {{ $style := resources.Get "main.css" | resources.Minify | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    
+    {{ partial "css" . }}
 </head>
 <body>
 
@@ -19,7 +19,10 @@
     <!-- Supongo que tenia que poner esto aqui, por los viejos tiempos jaja, esta pagina esta alojada en https://github.com/chevismo/chevismo.com - ahi deberias encontrar maneras de ponerte en contacto -->
     <p></p>
     <p>Hay algunas secciones de Chevismo a las que tenía especial cariño, por ejemplo el diario :)</p>
-    <p>Toda la información de Chevismo está guardada, asi que en algún momento volveré a tener el diario online, en un formato más moderno eso si!</p>
+    <p>Toda la información de Chevismo está guardada, asi que poco a poco iré añadiendo secciones para que se puedan al menos ver!</p>
+    <ul>
+        <li><a href="/diario">Diario</a></li>
+    </ul>
     <p></p>
     <p>Si te gustaría ayudar o tienes ideas que quieres probar ponte en contacto también!</p>
     <p></p>

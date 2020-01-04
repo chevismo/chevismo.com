@@ -2,7 +2,8 @@
 <html>
 <head>
     <title>Chevismo.com</title>
-    <link rel="stylesheet" href="./main.css" media="all">
+    {{ $style := resources.Get "main.css" | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
 </head>
 <body>
 

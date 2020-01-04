@@ -1,0 +1,3 @@
+<ul>
+    {{ range (.Paginator 50).Pages }} {{ partial "diario-list-item" . }} {{ end }}
+</ul>

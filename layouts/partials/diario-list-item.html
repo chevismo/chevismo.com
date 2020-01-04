@@ -1,0 +1,6 @@
+{{ $.Scratch.Set "link" .RelPermalink }}
+
+<li>
+    <a href="{{ .Scratch.Get "link" }}">{{ .Title }}</a>
+    <p>{{ .Summary }}</p>
+</li>

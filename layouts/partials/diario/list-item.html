@@ -1,7 +1,12 @@
 {{ $.Scratch.Set "link" .RelPermalink }}
 
 <a href="{{ .Scratch.Get "link" }}">
-    <h2>{{ .Title }}</h2>
+    <h2>
+        {{ .Title }}
+        <small class="text-muted" style="font-size: 0.6em">
+            ({{ .Params.comments }})
+        </small>
+    </h2>
 </a>
 <p>{{ .Summary }}</p>
 

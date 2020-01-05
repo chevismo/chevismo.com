@@ -35,16 +35,36 @@ article {
     border-right: #8f3434 solid 4px;
     border-left: #8f3434 solid 4px;
     font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 1.25rem;
+}
+
+.diario-content h1,
+.diario-content h2,
+.diario-content h3,
+.diario-content h4,
+.diario-content h5 {
+    color: #5E0002;
+    text-shadow: #FFF 1px 1px;
 }
 
 .diario-content h2 {
-    color: #5E0002;
-    text-shadow: #FFF 1px 1px;
     font-size: 1.5rem;
 }
 
-.diario-content .content {
-    font-size: 1.25rem;
+.divider {
+    border-top: #8f3434 solid 2px;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+    margin-top: 1em;
+}
+
+.anon {
+    color: #666 !important;
+}
+
+.op {
+    background: #f9f0a9 !important;
+    color: #8f3434 !important;
 }
 
 .diario-footer {

@@ -25,6 +25,9 @@ function load(pathStr) {
             regex: /Ã¢â€šÂ¬/gm,
             value: '€',
         }, {
+            regex: /Ã¢â‚¬Â¦/gm,
+            value: '!',
+        }, {
             regex: /Ãƒâ€œ/gm,
             value: 'Ó',
         }, {
@@ -75,6 +78,9 @@ function load(pathStr) {
         }, {
             regex: /Â¿/gm,
             value: '¿',
+        }, {
+            regex: /Ãš/gm,
+            value: 'Ú',
         }, {
             regex: /Â¡/gm,
             value: '¡',
@@ -144,7 +150,7 @@ function simplifyComment(rawComment) {
     return {
         date: getDateStr(commentDate),
         ident: rawComment.ident,
-        comment: rawComment.msg.replace(/\n/gm, '\\n').replace(/"/gm, '\\"').replace(/[\x00-\x1F\x7F-\x9F]/gm, ""),
+        comment: rawComment.msg.replace(/\n/gm, '  \\n').replace(/"/gm, '\\"').replace(/[\x00-\x1F\x7F-\x9F]/gm, ""),
     };
 }
 

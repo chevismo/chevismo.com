@@ -82,6 +82,9 @@ function load(pathStr) {
             regex: /Ãš/gm,
             value: 'Ú',
         }, {
+            regex: /Ã§/gm,
+            value: 'ç',
+        }, {
             regex: /Â¡/gm,
             value: '¡',
         }, {

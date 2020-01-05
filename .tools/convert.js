@@ -1,7 +1,8 @@
 const fs = require('fs');
+const path = require("path");
 
-const posts = load('diario.json');
-const comments = load('diarioCom.json');
+const posts = load('./diario.json');
+const comments = load('./diarioCom.json');
 
 const diarioPath = '../content/diario/';
 
@@ -13,8 +14,8 @@ function escapeRegExp(text) {
   return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
 }
 
-function load(path) {
-    let raw = String(fs.readFileSync(path));
+function load(pathStr) {
+    let raw = String(fs.readFileSync(path.resolve(__dirname, pathStr)));
     
     const cleanup = [
         {
@@ -44,6 +45,9 @@ function load(path) {
         }, {
             regex: /ÃƒÂº/gm,
             value: 'ú',
+        }, {
+            regex: /ÃƒÂ¼/gm,
+            value: 'ü',
         }, {
             regex: /Ã‚Â¿/gm,
             value: '¿',
@@ -193,7 +197,7 @@ function processPost(post) {
                     '---\n\n' +
                     postTest;
 
-    fs.writeFile(diarioPath + postName, content, (err) => {
+    fs.writeFile(path.resolve(__dirname, diarioPath + postName), content, (err) => {
         // throws an error, you could also catch it here
         if (err) throw err;
     });

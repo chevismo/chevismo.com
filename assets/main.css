@@ -36,6 +36,7 @@ article {
     border-left: #8f3434 solid 4px;
     font-family: Georgia,"Times New Roman",Times,serif;
     font-size: 1.25rem;
+    word-wrap: break-word;
 }
 
 .diario-content h1,

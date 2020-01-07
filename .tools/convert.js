@@ -3,10 +3,12 @@ const path = require("path");
 
 const posts = load('./diario.json');
 const comments = load('./diarioCom.json');
+const users = load('./users.json');
 
 const diarioPath = '../content/diario/';
 
 const commentsPerPost = {};
+const usersById = {};
 
 /* --- SOME HELPER METHODS --- */
 
@@ -153,9 +155,18 @@ function getDateStr(date) {
 function simplifyComment(rawComment) {
     const commentTimestamp = parseInt(rawComment.timestamp, 10);
     const commentDate = new Date(commentTimestamp * 1000);
+    let user = {
+        name: '',
+        color: '',
+    };
+    if (rawComment.ident === '1' && usersById[rawComment.usid]) {
+        user = usersById[rawComment.usid];
+    }
     return {
         date: getDateStr(commentDate),
         ident: rawComment.ident,
+        user: user.name,
+        color: user.color,
         comment: rawComment.msg.replace(/\n/gm, '  \\n').replace(/"/gm, '\\"').replace(/[\x00-\x1F\x7F-\x9F]/gm, ""),
     };
 }
@@ -202,9 +213,6 @@ function processPost(post) {
                     'title: "' + title + '"\n' +
                     'comments: ' + commentsNum + '\n' + 
                     'id: ' + post.timestamp + '\n' + 
-                    // 'resources:\n' + 
-                    // '- name: comments\n' + 
-                    // '  src: comments/'+post.timestamp+'.json\n' + 
                     commentListStr +
                     '---\n\n' +
                     postTest;
@@ -216,6 +224,12 @@ function processPost(post) {
 }
 
 /* --- START CONVERSION --- */
+
+console.log('Processing users...');
+
+for (let i = 0; i<users.length; i++) {
+    usersById[users[i].id] = users[i];
+}
 
 console.log('Processing comments...');
 

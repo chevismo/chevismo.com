@@ -33,6 +33,9 @@
                   {{ $class = "anon" }}
                   <span class="text-muted">Anónimo</span> &mdash;
                 {{ end }}
+                {{ if eq $comment.ident "1" }}
+                  <b class="user" style="color: #{{$comment.color}}">@{{ $comment.user }}</b> &mdash;
+                {{ end }}
                 {{ if eq $comment.ident "2" }}
                   {{ $class = "op" }}
                   <span class="op">Autor</span> &mdash;

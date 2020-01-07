@@ -12,7 +12,9 @@ body {
 }
 
 header {
-    margin: 3em 0;
+    padding: 1em;
+    margin-bottom: 2em;
+    background: scale-color($color: $bg, $lightness: 10%);
 }
 
 a, a:visited, a:focus, a:hover {

@@ -1,6 +1,8 @@
 {{ partial "diario/header" . }}
 
-<h1>{{ .Title }}</h1>
+<h2 class="mb-4">
+  <a href="{{ .Permalink }}">&mdash; {{ .Title }}</a>
+</h2>
 <small>{{ .Description }}</small>
 <div class="content">
     {{ .Content }}
@@ -16,20 +18,31 @@
   {{ end }}
 </div>
 
-<h3 class="divider">{{ .Params.comments }} Comentarios</h3>
+{{ if gt .Params.comments 0 }}
+  <h3 class="divider">{{ .Params.comments }} Comentario{{ if gt .Params.comments 1 }}s{{end}}</h3>
 
-{{ range $comment := .Params.commentList }}
-    {{ $class := "" }}
-    {{ if eq $comment.ident "0" }}
-       {{ $class = "anon" }}
-    {{ end }}
-    {{ if eq $comment.ident "2" }}
-       {{ $class = "op" }}
-    {{ end }}
-    <h4 class="{{ $class }}">{{ $comment.date }}</h4>
-    <div>{{ markdownify $comment.comment }}</div>
-
-    <hr />
+  {{ range $comment := .Params.commentList }}
+      {{ $class := "" }}
+      <div class="entry">
+        <div>{{ markdownify $comment.comment }}</div>
+        
+        <div class="text-right">
+            <h2 class="text-right {{ $class }}">
+                &mdash;
+                {{ if eq $comment.ident "0" }}
+                  {{ $class = "anon" }}
+                  <span class="text-muted">Anónimo</span> &mdash;
+                {{ end }}
+                {{ if eq $comment.ident "2" }}
+                  {{ $class = "op" }}
+                  <span class="op">Autor</span> &mdash;
+                {{ end }}
+                {{ $comment.date }}
+            </h2>
+        </div>
+    </div>
+    <hr>
+  {{ end }}
 {{ end }}
 
 {{ partial "diario/footer" . }}

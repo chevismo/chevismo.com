@@ -103,6 +103,9 @@ function load(pathStr) {
             regex: /Ãº/gm,
             value: 'ú',
         }, {
+            regex: /Ã¼/gm,
+            value: 'ü',
+        }, {
             regex: /Ã/gm,
             value: 'í',
         }, {

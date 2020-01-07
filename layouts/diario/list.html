@@ -1,10 +1,10 @@
 {{ partial "diario/header" . }}
 
-<div class="alert alert-warning">
+<!-- <div class="alert alert-warning">
   <p><b>Bienvenido!</b> Habrás visto que cerré Chevismo, al menos en su forma original...</p>
   <p>Por suerte toda la información está guardada, así que poco a poco lo voy a ir restaurando. Inicialmente como "biblioteca", donde se podrá acceder a todo el contenido que había antes aunque solo sea como recuerdo.</p>
   <p>Más adelante añadiré un sistema para publicar nuevo contenido, al diario, al chat... etc</p>
-</div>
+</div> -->
 
 {{ range (.Paginator 50).Pages }} {{ partial "diario/list-item" . }} {{ end }}
 

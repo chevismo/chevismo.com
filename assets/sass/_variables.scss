@@ -1,0 +1,14 @@
+$code-horizontal-margin: -2rem;
+$top-border-width: 0.5rem;
+
+$background: #f5f5f5;
+$accent: #0366d6;
+$pink: #fc5185;
+
+$primary: #3fc1c9;
+$secondary: $pink;
+$dark: #364f6b;
+
+@import './vendor/bootstrap/scss/functions';
+@import './vendor/bootstrap/scss/variables';
+@import './vendor/bootstrap/scss/mixins';

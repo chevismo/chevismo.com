@@ -1,13 +1,21 @@
 {{ $.Scratch.Set "link" .RelPermalink }}
 
-<a href="{{ .Scratch.Get "link" }}">
-    <h2>
-        {{ .Title }}
-        <small class="text-muted" style="font-size: 0.6em">
-            ({{ .Params.comments }})
-        </small>
-    </h2>
+<a href="{{ .Scratch.Get "link" }}" class="entry">
+    <p>
+        {{ .Summary }}
+        {{ if .Truncated }}
+            <small class="text-muted">(Leer más... )</small>
+        {{ end }}
+    </p>
+    
+    <div class="text-right">
+        <h2 class="text-right">
+            &mdash; {{ .Title }}
+        </h2>
+        {{ if gt .Params.comments 0 }}
+            <p class="text-muted" style="font-size: 0.8em">
+                {{ .Params.comments }} Comentario{{ if gt .Params.comments 1 }}s{{end}}
+            </p>
+        {{ end }}
+    </div>
 </a>
-<p>{{ .Summary }}</p>
-
-<hr />

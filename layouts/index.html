@@ -4,6 +4,9 @@
     <title>Chevismo.com</title>
     
     {{ partial "css" . }}
+
+    {{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "main.scss" . | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
 </head>
 <body>
 

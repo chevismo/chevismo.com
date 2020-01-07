@@ -1,0 +1,78 @@
+@import 'common';
+
+$bg: #DCCCB1;
+$linkColor: #6D3A19;
+
+body {
+    background: $bg;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    margin: 3em 0;
+}
+
+a, a:visited, a:focus, a:hover {
+    color: $linkColor;
+}
+
+.content {
+    position: relative;
+    font-size: 1.1em;
+}
+
+.entry {
+    color: inherit;
+    display: block;
+    padding: 2em 0.5em;
+    border-radius: 0.25em;
+
+    h2 {
+        font-size: 1em;
+        color: scale-color($color: $linkColor, $lightness: 10%);
+        margin-bottom: 0;
+    }
+}
+
+a.entry {
+    &:visited, &:focus, &:hover {
+        color: inherit;
+    }
+
+    &:hover {
+        color: inherit;
+        box-shadow: 0 10px 20px fade-out(#000, 0.95);
+        text-decoration: none;
+        background-color: scale-color($color: $bg, $lightness: 5%);
+    }
+}
+
+.op {
+    background: #DC9346;
+    color: #2E1703;
+    padding: 0.15em 0.5em;
+    border-radius: 0.25em;
+    margin-top: 0.5em;
+    display: inline-block;
+}
+
+hr {
+    width: 20%;
+    margin: 0 auto;
+}
+
+h3.divider {
+    border-top: solid scale-color($color: $bg, $lightness: -10%) 2px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding-top: 1em;
+}
+
+footer {
+    margin-top: 3em;
+    padding: 1em;
+    font-size: 0.9em;
+}

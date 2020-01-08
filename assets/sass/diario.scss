@@ -3,8 +3,12 @@
 $bg: #DCCCB1;
 $linkColor: #6D3A19;
 
+html {
+    background-color: $bg;
+}
+
 body {
-    background: $bg;
+    background: url('/assets/paper.png') repeat;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 18px;
     padding: 0;
@@ -61,16 +65,23 @@ a.entry {
     display: inline-block;
 }
 
+.notice {
+    background-color: scale-color($color: $bg, $lightness: 5%);
+    padding: 1em;
+    margin-top: 2em;
+}
+
 hr {
     width: 20%;
     margin: 0 auto;
 }
 
-h3.divider {
+.divider {
     border-top: solid scale-color($color: $bg, $lightness: -10%) 2px;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin: 1em 0 0;
     padding-top: 1em;
+    text-align: center;
+    font-size: 0.9em;
 }
 
 footer {

@@ -39,6 +39,12 @@ function load(pathStr) {
             regex: /ÃƒÂ¡/gm,
             value: 'á',
         }, {
+            regex: /Ã‚Â«/gm,
+            value: '«',
+        }, {
+            regex: /Ã‚Â»/gm,
+            value: '»',
+        }, {
             regex: /ÃƒÂ©/gm,
             value: 'é',
         }, {
@@ -84,8 +90,17 @@ function load(pathStr) {
             regex: /Ãš/gm,
             value: 'Ú',
         }, {
+            regex: /Ã‰/gm,
+            value: 'É',
+        }, {
             regex: /Ã§/gm,
             value: 'ç',
+        }, {
+            regex: /Â«/gm,
+            value: '«',
+        }, {
+            regex: /Â»/gm,
+            value: '»',
         }, {
             regex: /Â¡/gm,
             value: '¡',

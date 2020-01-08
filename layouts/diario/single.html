@@ -19,7 +19,9 @@
 </div>
 
 {{ if gt .Params.comments 0 }}
-  <h3 class="divider">{{ .Params.comments }} Comentario{{ if gt .Params.comments 1 }}s{{end}}</h3>
+  <h4 class="divider">
+    {{ .Params.comments }} Comentario{{ if gt .Params.comments 1 }}s{{end}}
+  </h4>
 
   {{ range $comment := .Params.commentList }}
       {{ $class := "" }}
@@ -47,5 +49,7 @@
     <hr>
   {{ end }}
 {{ end }}
+
+{{ partial "diario/notice" . }}
 
 {{ partial "diario/footer" . }}

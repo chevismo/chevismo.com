@@ -5,9 +5,9 @@ Seguramente seas uno de los usuarios "de siempre", ¿Qué época verdad? Hace un
 
 Si quieres seguir en contacto envíame un mensaje! No es dificil encontrar la manera.
 
-Hay algunas secciones de Chevismo a las que tenía especial cariño, por ejemplo el diario :)
+Hay algunas secciones de Chevismo a las que tenía especial cariño, por ejemplo [el diario](https://chevismo.com/diario/) :)
 
-Toda la información de Chevismo está guardada, asi que en algún momento volveré a tener el diario online, en un formato más moderno eso si!
+Toda la información de Chevismo está guardada, asi que poco a poco algunas secciones iran volviendo.
 
 Si te gustaría ayudar o tienes ideas que quieres probar ponte en contacto también!
 

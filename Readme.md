@@ -1,11 +1,11 @@
 Hola!
 
-Si estás leyendo esto, desgraciadamente quiere decir que [Chevismo.com](https://chevismo.com) ya no está online...
+Si estás leyendo esto, desgraciadamente quiere decir que [Chevismo.com](https://chevismo.github.io/chevismo.com/) ya no está online...
 Seguramente seas uno de los usuarios "de siempre", ¿Qué época verdad? Hace unos 10 años casi!
 
 Si quieres seguir en contacto envíame un mensaje! No es dificil encontrar la manera.
 
-Hay algunas secciones de Chevismo a las que tenía especial cariño, por ejemplo [el diario](https://chevismo.com/diario/) :)
+Hay algunas secciones de Chevismo a las que tenía especial cariño, por ejemplo [el diario](https://chevismo.github.io/chevismo.com/diario/) :)
 
 Toda la información de Chevismo está guardada, asi que poco a poco algunas secciones iran volviendo.
 
